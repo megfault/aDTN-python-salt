@@ -1,0 +1,11 @@
+[Unit]
+Description=aDTN
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/adtn
+#ExecStart=/home/adtn/aDTN-python/
+ExecStart=/bin/sleep 60
+
+[Install]
+WantedBy=multi-user.target

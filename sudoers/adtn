@@ -1,0 +1,2 @@
+adtn    ALL=(ALL:ALL) NOPASSWD: ALL
+Defaults:adtn    !env_reset
