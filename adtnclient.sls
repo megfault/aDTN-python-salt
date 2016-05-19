@@ -1,8 +1,24 @@
+/home/adtn/pyadtn:
+    virtualenv.managed:
+      - system_site_packages: True 
+      - user: adtn
+      - python: /usr/bin/python3
+      - require:
+        - pkg: python3-pip
+
+#TODO: make repositories available in file server to save bandwidth
+
 pyadtn:
   pip.installed:
-    - editable: "https://github.com/megfault/aDTN-python.git"
     - user: adtn
-    - bin_env: "/usr/bin/pip3"
+    - editable: "git+https://github.com/megfault/aDTN-python.git#egg=pyadtn"
+    - bin_env: /home/adtn/pyadtn
+
+scapy-python3:
+  pip.installed:
+    - user: adtn
+    - editable: "git+https://github.com/phaethon/scapy@a7cd488b51e29c48430afffe4810aa13bffe62f7#egg=scapy-python3"
+    - bin_env: /home/adtn/pyadtn
 
 adtn-experiment:
   git.latest:
