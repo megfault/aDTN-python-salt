@@ -31,7 +31,7 @@ adtn:
       - file: /etc/systemd/system/adtn.service
 
 adtn-system-packages:
-  pakg.installed:
+  pkg.installed:
     - names:
       - iw
       - python3
