@@ -4,6 +4,12 @@ adtn-app:
     - target: "/home/adtn/aDTN-python"
     - user: adtn
 
+adtn-experiment:
+  git.latest:
+    - name: "https://github.com/megfault/aDTN-experiment.git"
+    - target: "/home/adtn/aDTN-experiment"
+    - user: adtn
+
 /etc/sudoers.d/adtn:
   file.managed:
     - source: salt://sudoers/adtn
