@@ -23,7 +23,7 @@ scapy-python3:
 adtn-experiment:
   git.latest:
     - name: "https://github.com/megfault/aDTN-python-experiment.git"
-   - target: "/home/adtn/aDTN-experiment"
+    - target: "/home/adtn/aDTN-experiment"
     - user: adtn
 
 /etc/sudoers.d/adtn:
