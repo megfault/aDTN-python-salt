@@ -1,8 +1,8 @@
-adtn-app:
-  git.latest:
-    - name: "https://github.com/megfault/aDTN-python.git"
-    - target: "/home/adtn/aDTN-python"
+pyadtn:
+  pip.installed:
+    - editable: "https://github.com/megfault/aDTN-python.git"
     - user: adtn
+    - bin_env: "/usr/bin/pip3"
 
 adtn-experiment:
   git.latest:
@@ -33,6 +33,7 @@ adtn:
 adtn-system-packages:
   pakg.installed:
     - names:
+      - iw
       - python3
       - virtualenvwrapper
       - git
