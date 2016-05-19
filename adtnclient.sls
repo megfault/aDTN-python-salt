@@ -29,3 +29,21 @@ adtn:
     - enable: True
     - require:
       - file: /etc/systemd/system/adtn.service
+
+adtn-system-packages:
+  pakg.installed:
+    - names:
+      - python3
+      - python-scapy
+      - virtualenvwrapper
+      - git
+      - sudo
+      - python-pip
+      - python3-pip
+      - gcc
+      - ssh
+      - vim
+      - libsodium13
+      - libsodium-dev
+      - libffi6
+      - libffi-dev
