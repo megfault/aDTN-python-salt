@@ -1,4 +1,4 @@
-/home/adtn/pyadtn:
+/home/adtn/.virtualenvs/pyadtn:
     virtualenv.managed:
       - system_site_packages: True 
       - user: adtn
@@ -12,18 +12,18 @@ pyadtn:
   pip.installed:
     - user: adtn
     - editable: "git+https://github.com/megfault/aDTN-python.git#egg=pyadtn"
-    - bin_env: /home/adtn/pyadtn
+    - bin_env: /home/adtn/.virtualenvs/pyadtn
 
 scapy-python3:
   pip.installed:
     - user: adtn
     - editable: "git+https://github.com/phaethon/scapy@a7cd488b51e29c48430afffe4810aa13bffe62f7#egg=scapy-python3"
-    - bin_env: /home/adtn/pyadtn
+    - bin_env: /home/adtn/.virtualenvs/pyadtn
 
 adtn-experiment:
   git.latest:
     - name: "https://github.com/megfault/aDTN-python-experiment.git"
-    - target: "/home/adtn/aDTN-experiment"
+   - target: "/home/adtn/aDTN-experiment"
     - user: adtn
 
 /etc/sudoers.d/adtn:
