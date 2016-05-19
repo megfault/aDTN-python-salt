@@ -6,7 +6,7 @@ adtn-app:
 
 adtn-experiment:
   git.latest:
-    - name: "https://github.com/megfault/aDTN-experiment.git"
+    - name: "https://github.com/megfault/aDTN-python-experiment.git"
     - target: "/home/adtn/aDTN-experiment"
     - user: adtn
 
