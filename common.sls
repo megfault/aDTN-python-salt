@@ -5,9 +5,15 @@ systemd-timesyncd:
 unattended-upgrades:
   pkg.installed
 
+{% for service in ['rpcbind','nfs-common'] %}
+{{ service }}:
+  service.dead:
+    - enable: False
+{% endfor %}
+
 ssh:
-  - pkg.installed
-  - service.runnig
+  pkg.installed: []
+  service.running:
     - enable: True
 
 ssh-keys:
