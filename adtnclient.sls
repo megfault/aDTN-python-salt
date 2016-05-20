@@ -4,7 +4,7 @@
       - user: adtn
       - python: /usr/bin/python3
       - require:
-        - adtnclient: adtn-system-packages
+        - pkg: adtn-system-packages
 
 #TODO: make repositories available in file server to save bandwidth
 
@@ -15,7 +15,7 @@ pyadtn:
     - bin_env: /home/adtn/.virtualenvs/pyadtn
     #TODO: how to require set of packages under adtn-system-packages?
     - require: 
-      - pkg: libffi-dev
+      - pkg: adtn-system-packages
 
 scapy-python3:
   pip.installed:
