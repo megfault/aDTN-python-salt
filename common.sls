@@ -8,7 +8,7 @@ base-packages:
       - git
       - sudo
       - ssh
-      - unattendend-packages
+      - unattended-upgrades
       - vim
 
 {% for service in ['rpcbind','nfs-common'] %}
