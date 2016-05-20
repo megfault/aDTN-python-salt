@@ -2,8 +2,14 @@ systemd-timesyncd:
   service.running:
     - enable: True
 
-unattended-upgrades:
-  pkg.installed
+base-packages:
+  pkg.installed:
+    - names:
+      - git
+      - sudo
+      - ssh
+      - unattendend-packages
+      - vim
 
 {% for service in ['rpcbind','nfs-common'] %}
 {{ service }}:
