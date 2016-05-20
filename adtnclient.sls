@@ -1,8 +1,27 @@
+/home/adtn/.virtualenvs/pyadtn:
+    virtualenv.managed:
+      - system_site_packages: True
+      - user: adtn
+      - python: /usr/bin/python3
+      - require:
+        - pkg: adtn-system-packages
+
+#TODO: make repositories available in file server to save bandwidth
+
 pyadtn:
   pip.installed:
-    - editable: "https://github.com/megfault/aDTN-python.git"
     - user: adtn
-    - bin_env: "/usr/bin/pip3"
+    - editable: "git+https://github.com/megfault/aDTN-python.git#egg=pyadtn"
+    - bin_env: /home/adtn/.virtualenvs/pyadtn
+    #TODO: how to require set of packages under adtn-system-packages?
+    - require: 
+      - pkg: adtn-system-packages
+
+scapy-python3:
+  pip.installed:
+    - user: adtn
+    - editable: "git+https://github.com/phaethon/scapy@a7cd488b51e29c48430afffe4810aa13bffe62f7#egg=scapy-python3"
+    - bin_env: /home/adtn/.virtualenvs/pyadtn
 
 adtn-experiment:
   git.latest:
@@ -31,17 +50,13 @@ adtn:
       - file: /etc/systemd/system/adtn.service
 
 adtn-system-packages:
-  pakg.installed:
+  pkg.installed:
     - names:
       - iw
       - python3
       - virtualenvwrapper
-      - git
-      - sudo
       - python3-pip
       - gcc
-      - ssh
-      - vim
       - libsodium13
       - libsodium-dev
       - libffi6
