@@ -54,8 +54,9 @@ adtn-system-packages:
     - names:
       - iw
       - python3
-      - virtualenvwrapper
+      - ipython3
       - python3-pip
+      - virtualenvwrapper
       - gcc
       - libsodium13
       - libsodium-dev
