@@ -8,8 +8,12 @@ base-packages:
       - git
       - sudo
       - ssh
-      - unattended-upgrades
       - vim
+
+unattended-upgrades:
+  pkg.installed: []
+  service.running:
+    - enable: True
 
 {% for service in ['rpcbind','nfs-common'] %}
 {{ service }}:
