@@ -63,3 +63,4 @@ adtn-system-packages:
       - libffi6
       - libffi-dev
       - python3-yaml
+      - tcpdump
