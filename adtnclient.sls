@@ -62,3 +62,4 @@ adtn-system-packages:
       - libsodium-dev
       - libffi6
       - libffi-dev
+      - python3-yaml
