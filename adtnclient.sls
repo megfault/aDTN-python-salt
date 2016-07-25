@@ -17,7 +17,7 @@ pyadtn:
     - require: 
       - pkg: adtn-system-packages
 
-pyric3:
+pyric:
   pip.installed:
     - name: pyric
     - user: adtn
