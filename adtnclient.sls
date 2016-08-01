@@ -70,3 +70,4 @@ adtn-system-packages:
       - libffi-dev
       - python3-yaml
       - tcpdump
+      - tshark 
