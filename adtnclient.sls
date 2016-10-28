@@ -26,7 +26,7 @@ pyric:
 scapy-python3:
   pip.installed:
     - user: adtn
-    - editable: "git+https://github.com/phaethon/scapy@a7cd488b51e29c48430afffe4810aa13bffe62f7#egg=scapy-python3"
+    - editable: "git+https://github.com/synnefy/scapy@0b70834c2506d899785d0c06d57d24fe6db2c087#egg=scapy-python3"
     - bin_env: /home/adtn/.virtualenvs/pyadtn
 
 adtn-experiment:
